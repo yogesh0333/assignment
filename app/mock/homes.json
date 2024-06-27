@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "address": "123 Main St",
+    "image": "https://example.com/image1.jpg",
+    "description": "A beautiful 2 bedroom home with a spacious backyard.",
+    "latitude": 37.7749,
+    "longitude": -122.4194
+  },
+  {
+    "id": 2,
+    "address": "456 Elm St",
+    "image": "https://example.com/image2.jpg",
+    "description": "A charming 3 bedroom home located in a quiet neighborhood.",
+    "latitude": 37.775,
+    "longitude": -122.4184
+  },
+  {
+    "id": 3,
+    "address": "789 Oak St",
+    "image": "https://example.com/image3.jpg",
+    "description": "A modern 4 bedroom home with an open floor plan.",
+    "latitude": 37.7751,
+    "longitude": -122.4174
+  }
+]

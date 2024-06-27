@@ -1,50 +1,65 @@
-# Welcome to your Expo app 👋
+# Real Estate Unlock App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Welcome to the Real Estate Unlock App! This mobile application allows real estate companies to remotely unlock homes for potential buyers to view. This README will guide you through setting up and running the app.
 
-## Get started
+## Prerequisites
 
-1. Install dependencies
+Before you begin, make sure you have the following installed:
 
-   ```bash
+- Node.js
+- npm (Node Package Manager) or yarn
+- Expo CLI (Install globally using npm install -g expo-cli)
+- Expo Go app installed on your iOS or Android device
+
+## Setting Up the App
+
+1. Clone the repository:
+
+git clone <repository-url>
+cd real-estate-unlock-app
+
+2. Install dependencies:
    npm install
-   ```
+   or
+   yarn install
 
-2. Start the app
+3. Start the Expo development server:
 
-   ```bash
-    npx expo start
-   ```
+npm start
 
-In the output, you'll find options to open the app in a
+This will start the Metro bundler. You can press `i` to open an iOS simulator or `a` to open an Android emulator, or scan the QR code with Expo Go on your device.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+4. Running on a physical device:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Install Expo Go app from App Store (iOS) or Google Play Store (Android).
+- Scan the QR code displayed in the Metro bundler using Expo Go app.
 
-## Get a fresh project
+## Running the Mock Server
 
-When you're ready, run:
+The app uses a mock server to simulate API responses. Follow these steps to run the server:
 
-```bash
-npm run reset-project
-```
+1. Navigate to the mock server directory:
+   cd mock-server
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install JSON Server:
 
-## Learn more
+npm install -g json-server
 
-To learn more about developing your project with Expo, look at the following resources:
+or
+yarn global add json-server
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+3. Start the JSON Server:
+   json-server --watch db.json --port 3000
 
-## Join the community
+This command starts the mock server with mock data stored in `db.json` file on port 3000.
 
-Join our community of developers creating universal apps.
+## Using the App
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **Login Screen:** Enter a username and password to log in. Use any credentials from the `db.json` file.
+- **Home List:** After logging in, you'll see a list of homes. Select a home to view details.
+- **Home Details:** View home details and if you're within 30 meters of the home, unlock it using the "Unlock" button.
+
+## Additional Notes
+
+- Make sure your device and development machine are on the same Wi-Fi network to ensure the Expo Go app can connect to the development server.
+- If you encounter any issues, refer to the error messages in the Metro bundler or terminal where the Expo server is running.
